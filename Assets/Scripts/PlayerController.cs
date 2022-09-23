@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour{
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
             Jump();
         }
+
+        Debug.DrawRay(this.transform.position, Vector2.down * 1.3f, Color.red);
     }
 
     //Salto del jugador
