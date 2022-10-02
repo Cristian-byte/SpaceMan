@@ -27,22 +27,24 @@ public class GameManager : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-        
+        if (Input.GetKeyDown(KeyCode.S)){
+            StartGame();
+        }
     }
     
     //Iniciar juego
     public void StartGame(){
-
+        SetGameState(GameState.inGame);
     }
 
     //Acabar juego
     public void GameOver(){
-
+        SetGameState(GameState.gameOver);
     }
 
     //Regresar al menu
     public void BackToMenu(){
-
+        SetGameState(GameState.menu);
     }
 
     private void SetGameState(GameState newGameState){
